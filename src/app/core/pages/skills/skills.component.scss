@@ -5,14 +5,9 @@
   padding-bottom: 4rem;
   position: relative;
   overflow: hidden;
-  background: transparent; /* Inherit the gradient from the parent page-wrapper */
-  min-height: 100vh; /* Ensure the section takes up the viewport height */
+  background: transparent;
+  min-height: 100vh;
   box-sizing: border-box;
-
-  &.visible {
-    background: rgba(255, 255, 255, 0.1); /* Slight overlay when visible */
-    backdrop-filter: blur(5px);
-  }
 
   .container {
     margin-left: auto;

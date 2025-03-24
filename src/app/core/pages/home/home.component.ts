@@ -77,10 +77,10 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   downloadCV(): void {
     if (isPlatformBrowser(this.platformId)) {
-      const pdfUrl = '/assets/cv.pdf';
+      const pdfUrl = 'cv.pdf';
       const link = document.createElement('a');
       link.href = pdfUrl;
-      link.download = 'Omar_Essam_CV.pdf';
+      link.download = 'cv.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

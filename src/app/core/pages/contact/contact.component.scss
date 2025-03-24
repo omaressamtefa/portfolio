@@ -9,11 +9,6 @@
   min-height: 100vh;
   box-sizing: border-box;
 
-  &.visible {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-  }
-
   &::before {
     content: "";
     position: absolute;
