@@ -1,0 +1,160 @@
+<section class="contact-section py-20 mt-24">
+  <div
+    class="container mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-12"
+  >
+    <!-- Left Side: Heading and Contact Info -->
+    <div class="text-left md:w-1/2 mb-12 md:mb-0">
+      <h2
+        class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 fade-in"
+      >
+        Let’s Create <span class="text-gradient">Something Incredible</span>
+      </h2>
+      <p
+        class="text-gray-300 text-lg md:text-xl mt-4 font-light max-w-md slideIn-top-0"
+      >
+        Transform your vision into reality with cutting-edge technology and
+        innovative solutions.
+      </p>
+      <div class="mt-12 space-y-8">
+        <!-- Email Me At -->
+        <div
+          class="contact-card flex items-center p-5 rounded-2xl slideIn-top-1"
+        >
+          <div class="contact-icon mr-5">
+            <i class="fas fa-envelope text-blue-400 text-2xl"></i>
+          </div>
+          <div>
+            <p class="text-white font-semibold text-lg">Email Me At</p>
+            <p class="text-gray-300 text-base">omaressamtefa&#64;gmail.com</p>
+          </div>
+        </div>
+        <!-- Quick Response -->
+        <div
+          class="contact-card flex items-center p-5 rounded-2xl slideIn-top-2"
+        >
+          <div class="contact-icon mr-5">
+            <i class="fas fa-comment-dots text-pink-400 text-2xl"></i>
+          </div>
+          <div>
+            <p class="text-white font-semibold text-lg">Quick Response</p>
+            <p class="text-gray-300 text-base">Within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div
+      class="md:w-1/2 w-full mt-24 contact-card flex items-center p-5 rounded-2xl slideIn-top-3"
+    >
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+        class="space-y-8 w-full"
+      >
+        <!-- Name Input -->
+        <div class="form-group slideIn-top-4">
+          <div class="relative">
+            <i
+              class="fas fa-user absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
+            ></i>
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              placeholder="Your Name"
+              class="w-full p-4 pl-12 rounded-2xl bg-transparent text-white border border-gray-600 focus:outline-none focus:border-blue-400 transition-all duration-300 placeholder-gray-400"
+              [ngClass]="{
+                'border-red-500':
+                  contactForm.get('name')?.invalid &&
+                  (contactForm.get('name')?.touched || submitted)
+              }"
+            />
+            <div
+              [hidden]="
+                !(
+                  contactForm.get('name')?.invalid &&
+                  (contactForm.get('name')?.touched || submitted)
+                )
+              "
+              class="text-red-500 text-sm mt-2"
+            >
+              Name is required.
+            </div>
+          </div>
+        </div>
+        <!-- Email Input -->
+        <div class="form-group slideIn-top-5">
+          <div class="relative">
+            <i
+              class="fas fa-envelope absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
+            ></i>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              placeholder="Your Email"
+              class="w-full p-4 pl-12 rounded-2xl bg-transparent text-white border border-gray-600 focus:outline-none focus:border-blue-400 transition-all duration-300 placeholder-gray-400"
+              [ngClass]="{
+                'border-red-500':
+                  contactForm.get('email')?.invalid &&
+                  (contactForm.get('email')?.touched || submitted)
+              }"
+            />
+            <div
+              [hidden]="
+                !(
+                  contactForm.get('email')?.invalid &&
+                  (contactForm.get('email')?.touched || submitted)
+                )
+              "
+              class="text-red-500 text-sm mt-2"
+            >
+              <span [hidden]="!contactForm.get('email')?.errors?.['required']">
+                Email is required.
+              </span>
+              <span [hidden]="!contactForm.get('email')?.errors?.['email']">
+                Please enter a valid email address.
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- Message Input -->
+        <div class="form-group slideIn-top-6">
+          <div class="relative">
+            <textarea
+              id="message"
+              formControlName="message"
+              placeholder="Share your thoughts..."
+              class="w-full p-4 rounded-2xl bg-transparent text-white border border-gray-600 focus:outline-none focus:border-blue-400 transition-all duration-300 h-40 resize-none placeholder-gray-400"
+              [ngClass]="{
+                'border-red-500':
+                  contactForm.get('message')?.invalid &&
+                  (contactForm.get('message')?.touched || submitted)
+              }"
+            ></textarea>
+            <div
+              [hidden]="
+                !(
+                  contactForm.get('message')?.invalid &&
+                  (contactForm.get('message')?.touched || submitted)
+                )
+              "
+              class="text-red-500 text-sm mt-2"
+            >
+              Message is required.
+            </div>
+          </div>
+        </div>
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="w-full p-4 rounded-2xl bg-gradient-to-r from-purple-700 to-indigo-800 text-white font-semibold flex items-center justify-center transition-all duration-300 slideIn-top-7"
+          [disabled]="contactForm.invalid"
+        >
+          <i class="fas fa-paper-plane mr-2"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

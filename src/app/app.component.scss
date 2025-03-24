@@ -1,0 +1,30 @@
+.btn-gradient {
+  padding: 1rem 1.5rem;
+
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
+  background-position: center center;
+  background-image: linear-gradient(
+    138deg,
+    #0468f7 0%,
+    #0468f7 25%,
+    #c645ff 65%,
+    #c645ff 100%
+  );
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gradient:hover {
+  background-position: left center;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-gradient:focus {
+  background-position: right center;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,107 @@
+<div class="page-wrapper">
+  <section
+    class="flex justify-center text-white hero-section items-center min-h-screen"
+  >
+    <div
+      class="container flex flex-col justify-between gap-12 items-center md:flex-row mx-auto px-6 py-6"
+    >
+      <div class="flex-1 hero-content">
+        <div class="mb-6">
+          <span
+            class="text-2xl text-gray-300 block font-bold greeting md:text-3xl opacity-0"
+            >hey, I'm</span
+          >
+          <h1
+            class="text-5xl text-white font-extrabold lg:text-7xl md:text-6xl name opacity-0"
+          >
+            Omar Essam
+          </h1>
+          <p
+            class="text-3xl text-purple-700 font-bold md:text-4xl min-h-[40px] mt-2 opacity-0 typewriter-text"
+          >
+            <span id="type-script"></span>
+          </p>
+        </div>
+        <p
+          class="text-gray-300 text-lg description leading-relaxed mb-6 md:text-xl opacity-0"
+        >
+          I'm a Frontend Developer passionate about crafting user-friendly and
+          visually engaging web experiences. This portfolio website, which I
+          designed and developed myself using TypeScript, Angular, SCSS, and
+          Tailwind CSS, showcases my skills and projects.
+        </p>
+        <div class="flex buttons mb-8 opacity-0 space-x-6">
+          <a
+            href="#"
+            class="flex bg-gradient-to-r rounded-full shadow-lg text-[1.5rem] text-white download-btn duration-300 font-extrabold from-purple-700 hover:scale-105 hover:shadow-xl items-center px-8 py-4 space-x-3 to-black-900 transition-all"
+            (click)="downloadCV()"
+          >
+            <span>Download CV</span>
+            <svg
+              class="h-7 w-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            routerLink="/contact"
+            routerLinkActive="active"
+            class="bg-gradient-to-r from-blue-700 to-black-200 rounded-full shadow-lg text-[1.5rem] text-white contact-btn duration-300 font-extrabold hover:bg-gray-700 hover:shadow-xl px-8 py-4 transition-all"
+            >Contact Me</a
+          >
+        </div>
+        <div class="flex opacity-0 social-icons space-x-6">
+          <a
+            href="https://github.com/omaressamtefa"
+            target="_blank"
+            class="text-gray-400 duration-300 hover:scale-110 hover:text-indigo-800 social-icon transform transition-all"
+          >
+            <i class="text-4xl fa-github fab"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/omar-essam-b9b8882b3/"
+            target="_blank"
+            class="text-gray-400 duration-300 hover:scale-110 hover:text-indigo-800 social-icon transform transition-all"
+          >
+            <i class="text-4xl fa-linkedin fab"></i>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-1 justify-center max-w-[50%] relative">
+        <a
+          href="https://www.linkedin.com/in/omar-essam-b9b8882b3/"
+          target="_blank"
+          class="text-gray-400 duration-300 hover:text-white social-icon transition-all"
+        >
+          <img
+            src="1.jpeg"
+            alt="Omar Essam"
+            class="border-6 border-gradient h-72 rounded-full w-72 image-delay md:h-96 md:w-96 object-cover profile-image"
+          />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills-section" class="skills-section min-h-screen">
+    <ng-container #skillsContainer></ng-container>
+  </section>
+
+  <section id="projects-section" class="projects-section min-h-screen">
+    <ng-container #projectsContainer></ng-container>
+  </section>
+
+  <section id="contact-section" class="contact-section min-h-screen">
+    <ng-container #contactContainer></ng-container>
+  </section>
+</div>

@@ -1,0 +1,119 @@
+<nav
+  class="navbar w-full fixed left-0 top-0 z-50 backdrop-blur-lg shadow-lg transition-all"
+>
+  <div class="container flex justify-between items-center mx-auto px-6 py-4">
+    <div class="flex items-center logo-group space-x-4">
+      <div
+        class="capitalize logo-icon text-xl font-black border-4 border-[#1e40af] p-3 rounded-full text-[#1e40af] bg-[#0a1236]/20 transition-all duration-300"
+      >
+        O
+      </div>
+      <div class="logo-text text-4xl font-extrabold tracking-tight">
+        <h1 class="name">
+          <span class="key" style="--i: 1">O </span>
+          <span class="key" style="--i: 2">m </span>
+          <span class="key" style="--i: 3">a </span>
+          <span class="key" style="--i: 4">r </span>
+          <span class="key" style="--i: 5"> </span>
+          <span class="key" style="--i: 6">E</span>
+          <span class="key" style="--i: 7">s</span>
+          <span class="key" style="--i: 8">s</span>
+          <span class="key" style="--i: 9">a</span>
+          <span class="key" style="--i: 10">m</span>
+        </h1>
+        <p
+          class="title text-[#d1d5db] text-sm font-medium mt-1 tracking-widest uppercase"
+        >
+          Frontend Developer
+        </p>
+      </div>
+    </div>
+
+    <div class="md:hidden">
+      <button class="focus:outline-none hamburger" (click)="toggleMenu()">
+        <svg
+          class="h-6 text-white w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <div
+      class="nav-group bsolute md:static top-16 left-0 w-full md:w-auto p-4 md:p-0 transition-all duration-300 bg-[#0a1236]/90 md:bg-transparent"
+      [ngClass]="{ active: isMenuOpen }"
+    >
+      <ul
+        class="nav-links flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6"
+      >
+        <li class="navbar_item">
+          <a
+            routerLink="/home"
+            routerLinkActive="active"
+            class="nav-link text-lg font-semibold text-white transition-all duration-300 relative"
+            (click)="closeMenu()"
+          >
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="navbar_item">
+          <a
+            routerLink="/skills"
+            routerLinkActive="active"
+            class="nav-link text-lg font-semibold text-white transition-all duration-300 relative"
+            (click)="closeMenu()"
+          >
+            <span>Skills</span>
+          </a>
+        </li>
+        <li class="navbar_item">
+          <a
+            routerLink="/projects"
+            routerLinkActive="active"
+            class="nav-link text-lg font-semibold text-white transition-all duration-300 relative"
+            (click)="closeMenu()"
+          >
+            <span>Projects</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- GitHub Icon -->
+      <a
+        href="https://github.com/omaressamtefa"
+        target="_blank"
+        class="social-icon text-white text-xl transition-all duration-300 py-2 md:py-0 mx-2 md:mx-0 hover:text-indigo-800 hover:scale-125"
+        (click)="closeMenu()"
+      >
+        <i class="fa-github fab"></i>
+      </a>
+
+      <!-- LinkedIn Icon -->
+      <a
+        href="https://www.linkedin.com/in/omar-essam-b9b8882b3/"
+        target="_blank"
+        class="social-icon text-white text-xl transition-all duration-300 py-2 md:py-0 mx-2 md:mx-0 hover:text-indigo-800 hover:scale-125"
+        (click)="closeMenu()"
+      >
+        <i class="fa-linkedin fab"></i>
+      </a>
+
+      <!-- Contact Button -->
+      <a
+        routerLink="/contact"
+        class="contact-btn relative text-white font-semibold px-6 py-2 rounded-full bg-gradient-to-r from-[#0a1236] to-[#1e40af] transition-all duration-300 overflow-hidden shadow-md mt-4 md:mt-0"
+        (click)="closeMenu()"
+        >Contact Me</a
+      >
+    </div>
+  </div>
+</nav>

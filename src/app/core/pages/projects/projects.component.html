@@ -1,0 +1,88 @@
+<section class="projects-section py-20 my-24">
+  <!-- Title -->
+  <h2
+    class="section-title text-5xl md:text-6xl font-extrabold text-white leading-tight mb-12 text-center fade-in"
+  >
+    My Projects
+  </h2>
+
+  <div class="projects-container">
+    <!-- Project 1: E-Commerce Platform -->
+    <div
+      class="project-card slideIn-top-0"
+      (click)="openProject('https://e-commerce-beta-ten-86.vercel.app/login')"
+    >
+      <img src="2.jpg" alt="E-Commerce Platform" class="project-image" />
+      <div class="project-content">
+        <h3 class="project-title">E-Commerce Platform</h3>
+        <p class="project-description">
+          A modern e-commerce platform designed for seamless online shopping.
+          Features include user authentication, product listings, cart
+          management, and secure checkout, all built with a responsive and
+          user-friendly interface.
+        </p>
+        <div class="project-technologies">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Angular</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: BookMark -->
+    <div
+      class="project-card slideIn-top-1"
+      (click)="openProject('https://bookmark-beta-jet.vercel.app/')"
+    >
+      <img src="2.jpg" alt="BookMark" class="project-image" />
+      <div class="project-content">
+        <h3 class="project-title">BookMark</h3>
+        <p class="project-description">
+          A bookmark management application that allows users to perform CRUD
+          operations. Easily add, edit, delete, and view bookmarks with a clean
+          and intuitive interface.
+        </p>
+        <div class="project-technologies">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: GameApi -->
+    <div
+      class="project-card slideIn-top-2"
+      (click)="openProject('https://game-api-sigma.vercel.app/')"
+    >
+      <img src="4.jpg" alt="GameApi" class="project-image" />
+      <div class="project-content">
+        <h3 class="project-title">Game API</h3>
+        <p class="project-description">
+          A simple game API project that provides endpoints to fetch game data.
+          Built with a focus on performance and ease of use for developers.
+        </p>
+        <div class="project-technologies">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GitHub Link -->
+  <!-- GitHub Link -->
+  <div
+    class="github-link flex justify-center mb-8 space-x-6 mx-auto text-center mt-10"
+  >
+    <a
+      href="https://github.com/omaressamtefa"
+      target="_blank"
+      class="github-btn flex items-center space-x-3 px-8 py-4 rounded-full text-white font-extrabold text-[1.5rem] transition-all duration-300 bg-gradient-to-r from-purple-800 to to-indigo-800"
+    >
+      <span class="github-text"> Visit My GitHub</span>
+      <i class="fab fa-github text-2xl github-icon"></i>
+    </a>
+  </div>
+</section>

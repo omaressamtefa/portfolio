@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page-wrapper {
+  background: linear-gradient(135deg, #0a1236, #1e40af, #0a1236);
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+  min-height: 100vh;
+}
+
+.skills-section,
+.projects-section,
+.contact-section {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  display: block;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: transparent;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .placeholder {
+    font-size: 1.5rem;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+.hero-section {
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+
+  .hero-content {
+    animation: fadeIn 1s ease-in-out forwards;
+
+    .greeting {
+      animation: slideIn 0.5s ease-in-out forwards 0.5s;
+      letter-spacing: 1px;
+    }
+    .name {
+      animation: slideIn 0.5s ease-in-out forwards 0.7s;
+      font-family: "Playfair Display", serif;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .typewriter-text {
+      animation: slideIn 0.5s ease-in-out forwards 0.9s;
+      font-family: "Poppins", sans-serif;
+      letter-spacing: 1px;
+    }
+    .description {
+      animation: slideIn 0.5s ease-in-out forwards 1s;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+    .buttons {
+      animation: slideIn 0.5s ease-in-out forwards 1.1s;
+    }
+    .download-btn {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .contact-btn {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .social-icons {
+      animation: slideIn 0.5s ease-in-out forwards 1.3s;
+    }
+  }
+
+  .profile-image {
+    border: 6px solid transparent;
+    background: linear-gradient(45deg, #8b5cf6, #3b82f6, #ec4899) border-box;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .image-delay {
+    opacity: 0;
+    animation: imageAppear 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .typed-cursor {
+    @apply text-purple-400;
+    animation: blink 0.7s infinite;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
