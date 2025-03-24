@@ -24,7 +24,7 @@
       }
 
       &:hover {
-        transform: scale(1.1); // Replaced @apply scale-110
+        transform: scale(1.1);
         box-shadow: 0 0 20px rgba(30, 64, 175, 0.5);
         background: rgba(10, 18, 54, 0.3);
 
@@ -42,7 +42,7 @@
       }
 
       .key {
-        display: inline-block; // Replaced @apply inline-block
+        display: inline-block;
         letter-spacing: 0.2rem;
         transition: transform 0.2s;
       }
@@ -90,12 +90,12 @@
     @media (max-width: 767px) {
       display: none;
       position: absolute;
-      top: 100%; // Aligns below navbar
+      top: 100%;
       left: 0;
       width: 100%;
-      background: rgba(10, 18, 54, 0.9); // Matches HTML bg-[#0a1236]/90
+      background: rgba(10, 18, 54, 0.9);
       padding: 1rem;
-      transition: all 0.3s ease; // Smooth transition
+      transition: all 0.3s ease;
 
       &.active {
         display: flex;
@@ -105,10 +105,10 @@
     }
 
     @media (min-width: 768px) {
-      display: flex; // Replaced @apply flex
+      display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 2rem; // Replaced space-x-8
+      gap: 2rem;
     }
 
     .nav-links {
@@ -128,8 +128,8 @@
 
         &:hover,
         &.active {
-          color: #dbeafe; // Replaced @apply text-[#dbeafe]
-          transform: translateY(-0.125rem); // Replaced -translate-y-0.5
+          color: #dbeafe;
+          transform: translateY(-0.125rem);
           &::after {
             width: 100%;
             left: 0;
@@ -156,7 +156,7 @@
       }
 
       &:hover {
-        transform: scale(1.05); // Replaced @apply scale-105
+        transform: scale(1.05);
         box-shadow: 0 0 20px rgba(30, 64, 175, 0.6);
 
         &::before {
@@ -280,20 +280,20 @@
 
 @media (max-width: 767px) {
   .navbar {
-    padding-left: 1rem; // Replaced @apply px-4 py-3
+    padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
 
   .logo-icon {
-    font-size: 1.125rem; // Replaced @apply text-lg
-    padding: 0.5rem; // Replaced @apply p-2
+    font-size: 1.125rem;
+    padding: 0.5rem;
     animation: none;
   }
 
   .name {
-    font-size: 1.5rem; // Replaced @apply text-2xl
+    font-size: 1.5rem;
   }
 
   .key {

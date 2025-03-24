@@ -1,12 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .page-wrapper {
   background: linear-gradient(135deg, #0a1236, #1e40af, #0a1236);
   background-size: 200% 200%;
   animation: gradientAnimation 15s ease infinite;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .skills-section,
@@ -15,7 +13,7 @@
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
   display: block;
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 20px;
   box-sizing: border-box;
   background: transparent;
@@ -36,6 +34,11 @@
 .hero-section {
   background: transparent;
   font-family: "Poppins", sans-serif;
+
+  .container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 
   .hero-content {
     animation: fadeIn 1s ease-in-out forwards;
@@ -104,6 +107,96 @@
     animation: blink 0.7s infinite;
     font-size: 2.5rem;
     line-height: 1;
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      padding-top: 5rem;
+      padding-bottom: 2rem;
+    }
+
+    .hero-content {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .profile-image {
+      display: none;
+    }
+
+    .buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .social-icons {
+      justify-content: center;
+    }
+  }
+}
+
+.footer {
+  font-family: "Poppins", sans-serif;
+  margin-top: auto;
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .text-center p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .footer-links {
+    .footer-link {
+      position: relative;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #dbeafe;
+      }
+    }
+
+    &.flex-col {
+      gap: 0.75rem;
+    }
+
+    &.md\:flex-row {
+      gap: 2rem;
+    }
+  }
+
+  .footer-social {
+    gap: 1.5rem;
+    .footer-social-link {
+      color: #ffffff;
+      font-size: 1.75rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #1e40af;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .footer-links {
+      text-align: center;
+    }
+
+    .footer-social {
+      margin-top: 1.5rem;
+    }
   }
 }
 

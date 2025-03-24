@@ -93,15 +93,61 @@
     </div>
   </section>
 
-  <section id="skills-section" class="skills-section min-h-screen">
+  <section id="skills-section" class="skills-section">
     <ng-container #skillsContainer></ng-container>
   </section>
 
-  <section id="projects-section" class="projects-section min-h-screen">
+  <section id="projects-section" class="projects-section">
     <ng-container #projectsContainer></ng-container>
   </section>
 
-  <section id="contact-section" class="contact-section min-h-screen">
+  <section id="contact-section" class="contact-section">
     <ng-container #contactContainer></ng-container>
   </section>
+
+  <footer class="footer z-50 w-full py-6 text-white">
+    <div
+      class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+    >
+      <div class="text-center md:text-left mb-4 md:mb-0">
+        <p class="text-sm font-medium text-[#d1d5db]">
+          © 2025 Omar Essam. All rights reserved.
+        </p>
+      </div>
+      <ul
+        class="footer-links flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0"
+      >
+        <li>
+          <a href="/home" class="footer-link text-sm font-medium">Home</a>
+        </li>
+        <li>
+          <a href="/skills" class="footer-link text-sm font-medium">Skills</a>
+        </li>
+        <li>
+          <a href="/projects" class="footer-link text-sm font-medium"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a href="/contact" class="footer-link text-sm font-medium">Contact</a>
+        </li>
+      </ul>
+      <div class="footer-social flex space-x-4">
+        <a
+          href="https://github.com/omaressamtefa"
+          target="_blank"
+          class="footer-social-link text-xl"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/omar-essam-b9b8882b3/"
+          target="_blank"
+          class="footer-social-link text-xl"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 </div>
