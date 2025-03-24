@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap");
+
 .navbar {
   background: transparent;
   border-bottom: 1px solid rgba(30, 64, 175, 0.2);
@@ -23,7 +24,7 @@
       }
 
       &:hover {
-        @apply scale-110;
+        transform: scale(1.1); // Replaced @apply scale-110
         box-shadow: 0 0 20px rgba(30, 64, 175, 0.5);
         background: rgba(10, 18, 54, 0.3);
 
@@ -41,7 +42,7 @@
       }
 
       .key {
-        @apply inline-block;
+        display: inline-block; // Replaced @apply inline-block
         letter-spacing: 0.2rem;
         transition: transform 0.2s;
       }
@@ -88,6 +89,14 @@
   .nav-group {
     @media (max-width: 767px) {
       display: none;
+      position: absolute;
+      top: 100%; // Aligns below navbar
+      left: 0;
+      width: 100%;
+      background: rgba(10, 18, 54, 0.9); // Matches HTML bg-[#0a1236]/90
+      padding: 1rem;
+      transition: all 0.3s ease; // Smooth transition
+
       &.active {
         display: flex;
         flex-direction: column;
@@ -96,7 +105,10 @@
     }
 
     @media (min-width: 768px) {
-      @apply flex flex-row items-center space-x-8;
+      display: flex; // Replaced @apply flex
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem; // Replaced space-x-8
     }
 
     .nav-links {
@@ -116,7 +128,8 @@
 
         &:hover,
         &.active {
-          @apply text-[#dbeafe] -translate-y-0.5;
+          color: #dbeafe; // Replaced @apply text-[#dbeafe]
+          transform: translateY(-0.125rem); // Replaced -translate-y-0.5
           &::after {
             width: 100%;
             left: 0;
@@ -143,7 +156,7 @@
       }
 
       &:hover {
-        @apply scale-105;
+        transform: scale(1.05); // Replaced @apply scale-105
         box-shadow: 0 0 20px rgba(30, 64, 175, 0.6);
 
         &::before {
@@ -265,18 +278,22 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar {
-    @apply px-4 py-3;
+    padding-left: 1rem; // Replaced @apply px-4 py-3
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .logo-icon {
-    @apply text-lg p-2;
+    font-size: 1.125rem; // Replaced @apply text-lg
+    padding: 0.5rem; // Replaced @apply p-2
     animation: none;
   }
 
   .name {
-    @apply text-2xl;
+    font-size: 1.5rem; // Replaced @apply text-2xl
   }
 
   .key {
